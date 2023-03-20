@@ -1,0 +1,65 @@
+.trello-logo {
+    font-size: 1.3rem;
+    margin-right: 2rem;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+.liste-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.liste-flex>.product {
+    width: 180px;
+    text-align: center;
+}
+
+.liste-flex>.user {
+    width: 80px;
+    text-align: center;
+}
+
+.liste-flex>.products {
+    width: 180px;
+    text-align: center;
+}
+
+.liste-head {
+    border: 1px solid rgba(128, 128, 128, 0.853);
+    border-radius: 5px;
+    background-color: rgba(238, 218, 218, 0.592);
+    list-style: none;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.liste {
+    border: 1px solid rgba(128, 128, 128, 0.757);
+    background-color: rgba(238, 218, 218, 0.329);
+    list-style: none;
+}
+
+
+
+.nom {
+    font-size: 1.2em;
+}
+
+.alerte {
+    color: rgb(219, 23, 23);
+}
+
+.nom-utilisateur {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.card-custom {
+    margin-left: 50px;
+}

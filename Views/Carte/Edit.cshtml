@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Editer une carte";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card">
+
+    <form method="POST" asp-controller="Carte" asp-action="Edit" asp-route-IdCarte="@Model.IdCarte">
+
+        <div class="input-group m-3">
+            <p><input class="px-5" type="text" id="Titre" name="Titre" value="@Model.Titre"></p>
+        </div>
+
+        <div class="input-group m-3">
+            <p><input class="px-5" type="text" id="Description" name="Description" value="@Model.Description"></p>
+        </div>
+
+        <div class="input-group m-3">
+            <input type="submit" value="Modifier" />
+        </div>
+
+    </form>
+</div>

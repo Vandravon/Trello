@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form method="POST" asp-controller="Projet" asp-action="Index">
+    <select class="form-select" name="IdProjet">
+        <option selected>Sélectionnez votre projet</option>
+
+        @foreach (ProjetUtilisateur element in Model.ProjetUtilisateurs)
+        {
+            <option value="@element.projetNav.IdProjet">@element.projetNav.Nom</option>
+        }
+
+    </select>
+
+    <div class="input-group m-3">
+        <input type="submit" value="Sélectionner" />
+    </div>
+</form>
