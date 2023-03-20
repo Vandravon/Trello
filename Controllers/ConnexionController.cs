@@ -29,8 +29,6 @@ namespace Trellov2.Controllers
             }
             else
             {
-                Console.WriteLine(email);
-                Console.WriteLine(motDePasse);
                 Console.WriteLine("Connexion échouée");
                 return RedirectToAction("Index", "Home");
             }

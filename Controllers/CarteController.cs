@@ -11,7 +11,6 @@ public class CarteController : Controller
 
     public CarteController()
     {
-        Console.WriteLine("Carte ok!");
         
     }
 

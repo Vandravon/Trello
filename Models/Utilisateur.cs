@@ -29,17 +29,6 @@ public partial class Utilisateur
 		this.DateInscription = DateTime.Now;
 	}
 
-	// public void AddProjet(Projet projet)
-	// {
-	// 	this.IdProjets.Add(projet);
-	// 	projet.IdUtilisateurs.Add(this);
-	// }
-
-	// public List<Projet> GetProjets()
-	// {
-	// 	return this.IdProjets;
-	// }
-
 	public List<ProjetUtilisateur> GetProjetUtilisateurs()
 	{
 		return this.ProjetUtilisateurs;

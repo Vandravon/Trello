@@ -12,7 +12,6 @@ public class HomeController : Controller
 
     public HomeController()
     {
-        Console.WriteLine("Home ok!");
         
     }
 

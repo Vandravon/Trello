@@ -22,7 +22,7 @@ public partial class Projet
     }
 
 
-	public Projet(string nom, string? description)// methode Utilisateurfirst
+	public Projet(string nom, string? description)
 	{
 		this.Nom = nom;
 		this.Description = description;

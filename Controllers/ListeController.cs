@@ -18,19 +18,10 @@ public class ListeController : Controller
 
     public IActionResult Index()
     {
-        // var utilisateur = context.Utilisateurs.Include( x => x.ProjetUtilisateurs)
-        // .ThenInclude(x => x.Projets)
-        // .ThenInclude(x => x.IdListes)
-        // .ThenInclude(x => x.Cartes)
-        // .First(x => x.IdUtilisateur == Global.USERID);
-        // foreach (ProjetUtilisateur item in utilisateur.ProjetUtilisateurs)
-        // {
-        //     Console.WriteLine(item.projetNav.Nom + " " + item.projetNav.Description);
-
-        // }
-
-        Projet projet = context.Projets.Include(x => x.IdListes).ThenInclude(x => x.Cartes).First(x => x.IdProjet == HttpContext.Session.GetInt32("ProjetId"));
-        Console.WriteLine(HttpContext.Session.GetInt32("UserId"));
+        Projet projet = context.Projets
+            .Include(x => x.IdListes)
+            .ThenInclude(x => x.Cartes)
+            .First(x => x.IdProjet == HttpContext.Session.GetInt32("ProjetId"));
         return View(projet);
     }
 

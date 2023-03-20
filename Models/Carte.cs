@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Trellov2.Models;
+﻿namespace Trellov2.Models;
 
 public partial class Carte
 {
@@ -56,14 +53,6 @@ public partial class Carte
 		this.IdEtiquettes.Remove(oldEtiquette);
 	}
 
-	// public void changeListe(Liste newListe)
-	// {
-	// 	this.IdListeNavigation.Cartes.Remove(this);
-	// 	this.IdListeNavigation = newListe;
-	// 	this.IdListe = newListe.Id;
-	// 	this.IdListeNavigation.Cartes.Add(this);
-	// }
-
     	public void changeTitre(string newTitre)
 	{
 		this.Titre = newTitre;
@@ -83,10 +72,6 @@ public partial class Carte
 	{
 		return this.IdEtiquettes;
 	}
-	// public List<Carte> SortByDate(List<Carte> cartes)
-	// {
-	// 	cartes.Sort((x, y) => x.DateCreation.CompareTo(y.DateCreation));
-	// 	return cartes;
-	// }
+
     
 }

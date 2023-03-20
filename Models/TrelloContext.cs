@@ -84,10 +84,6 @@ public partial class TrelloContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseMySQL("server=localhost;database=trellodos;user=root;password=admin1234;");
-    /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer(@"Server=DESKTOP-TCL9JSM;Database=Trello;Trusted_Connection=True;trustServerCertificate=true;");
-    }*/
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -58,11 +58,11 @@ public partial class Liste
 		return this.Cartes;
 	}
 
-	// public void insertCarte(Carte carte, int index)
-	// {
-	// 	this.Cartes.Insert(index, carte);
-	// 	carte.IdListeNavigation = this;
-	// 	carte.IdListe = this.IdListe;
-	// }
+	public void insertCarte(Carte carte, int index)
+	{
+		this.Cartes.Insert(index, carte);
+		carte.IdListeNavigation = this;
+		carte.IdListe = this.IdListe;
+	}
     
 }
