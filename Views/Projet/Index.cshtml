@@ -8,6 +8,7 @@
     <select class="form-select" name="IdProjet">
         <option selected>Sélectionnez votre projet</option>
 
+        <!-- On récupère un objet Utilisateur envoyé par ProjetController -->
         @foreach (ProjetUtilisateur element in Model.ProjetUtilisateurs)
         {
             <option value="@element.projetNav.IdProjet">@element.projetNav.Nom</option>

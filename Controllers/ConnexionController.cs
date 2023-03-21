@@ -6,7 +6,7 @@ namespace Trellov2.Controllers
 {
     public class ConnexionController : Controller
     {
-        static bool _userConnected { get; set; } = false;
+        public static bool userConnected { get; set; } = false; // Modifie ce qu'on affiche dans la Nav bar
         public ConnexionController() { }
 
         [HttpGet]
@@ -23,8 +23,8 @@ namespace Trellov2.Controllers
             if (utilisateurTmp!= null) 
             {
                 Console.WriteLine("Connexion réussie");
-                HttpContext.Session.SetInt32("UserId", utilisateurTmp.IdUtilisateur);
-                _userConnected = true;
+                HttpContext.Session.SetInt32("UserId", utilisateurTmp.IdUtilisateur); // Créé la variable de session UserId et lui donne la valeur de l'IdUtilisateur de l'objet
+                userConnected = true; // Change la Nav bar en affichant la Déconnexion
                 return RedirectToAction("Index", "Projet");
             }
             else
@@ -36,12 +36,12 @@ namespace Trellov2.Controllers
 
         public IActionResult Deconnexion()
         {
-            _userConnected = false;
+            userConnected = false; // Permet de remettre la Nav bar dans son état initial
             HttpContext.Session.Remove("UserId");
             HttpContext.Session.Remove("ProjetId");
             return RedirectToAction("Index", "Home");
         }
 
-        public bool IsConnected() { return _userConnected; }
+        public bool IsConnected() { return userConnected; } // Méthode de test
     }
 }

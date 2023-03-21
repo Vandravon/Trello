@@ -16,6 +16,7 @@ namespace Trellov2.Controllers
             List<Projet> list = new();
             if (HttpContext.Session.GetInt32("UserId") != null)
             {
+            // Récupère l'objet Utilisateur lié à l'UserId de la Session
             Utilisateur utilisateur = context.Utilisateurs.Include(utilisateur => utilisateur.ProjetUtilisateurs)
             .ThenInclude(projetUtilisateur => projetUtilisateur.projetNav)
             .First(x => x.IdUtilisateur == HttpContext.Session.GetInt32("UserId"));

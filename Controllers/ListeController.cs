@@ -70,11 +70,4 @@ public class ListeController : Controller
         context.SaveChanges();
         return RedirectToAction("Index");
     }
-
-    public IActionResult Test()
-    {
-        Console.WriteLine(HttpContext.Session.GetInt32("UserId").ToString());
-        return View();
-    }
-
 }

@@ -17,8 +17,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        HttpContext.Session.SetInt32("UserId", 0);
-        HttpContext.Session.SetInt32("ProjetId", 0);
+        ConnexionController.userConnected = false; // Permet de remettre la Nav bar dans son état initial
+        HttpContext.Session.Remove("UserId");
+        HttpContext.Session.Remove("ProjetId");
         return View();
     }
 

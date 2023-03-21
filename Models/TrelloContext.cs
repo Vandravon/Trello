@@ -8,6 +8,8 @@ public partial class TrelloContext : DbContext
 {
     public TrelloContext()
     {
+        // Pour repartir de 0 avec des entrées dans les tables
+
         /*Database.EnsureDeleted();
         Database.EnsureCreated();
         Console.WriteLine("DB lancée!");
